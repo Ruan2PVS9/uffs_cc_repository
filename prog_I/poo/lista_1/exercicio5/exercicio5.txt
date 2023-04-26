@@ -1,0 +1,3 @@
+5. Desenvolva uma classe Pessoa, com os atributos nome e idade e o método
+fazAniversario. Instancie a classe Pessoa no programa principal e teste os
+atributos e métodos.

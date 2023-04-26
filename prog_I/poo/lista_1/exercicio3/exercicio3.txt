@@ -1,0 +1,9 @@
+// 3. Quais são as restrições impostas pelos especificadores public, protected e
+private?
+
+em todos os casos a propria classe tem acesso;
+
+public: pode ser acessado pelo implementação e instanccias da superclasse e da subclasse;
+protected: pode ser acessado pela implementação da superclasse e a implementação da subclasse as instancias dessas não;
+private: so pode ser acessado pela implementação da superclasse.
+

@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th>x</th>
+            <th>P(x)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            const n = 10; // número total de ensaios
+            const p = 0.5; // probabilidade de sucesso em cada ensaio
+            const xMax = 10; // número máximo de sucessos desejados
+
+            // Função para calcular o coeficiente binomial
+            const binomialCoefficient = (n, x) => {
+                let result = 1;
+                for (let i = 1; i <= x; i++) {
+                    result *= (n - i + 1) / i;
+                }
+                return result;
+            };
+
+            // Loop para calcular as probabilidades para cada valor de x
+            for (let x = 0; x <= xMax; x++) {
+                const probability = binomialCoefficient(n, x) * Math.pow(p, x) * Math.pow(1 - p, n - x);
+                document.write(`<tr><td>${x}</td><td>${probability.toFixed(4)}</td></tr>`);
+            }
+        </script>
+    </tbody>
+</table>

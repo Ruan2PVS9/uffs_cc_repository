@@ -1,0 +1,3 @@
+// 2. O que são atributos e métodos?
+Atributos são os dados que poderão representar um determinado objeto.
+Enquanto os métodos é a forma com a qual temos para interagir com esse objeto e seus atributos, fazendo operações e consulta ou ateração dos seus atributos.
