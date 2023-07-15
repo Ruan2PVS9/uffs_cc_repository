@@ -1,4 +1,4 @@
-package aplicacaouffs;
+package exemplo_aula_8.aplicacaouffs;
 
 public class Pessoa {
     private String nome;
@@ -46,9 +46,9 @@ public class Pessoa {
     }
 
     public void imprimir() {
-	System.out.println("Metodo Imprimir Pessoa");
-	System.out.println("Nome: "+this.getNome());
-	System.out.println("CPF: "+this.getCPF());
+        System.out.println("Metodo Imprimir Pessoa");
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("CPF: " + this.getCPF());
     }
-   
+
 }

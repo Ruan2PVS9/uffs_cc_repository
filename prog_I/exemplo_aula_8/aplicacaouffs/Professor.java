@@ -1,7 +1,7 @@
-package aplicacaouffs;
+package exemplo_aula_8.aplicacaouffs;
 
-public class Professor extends Pessoa{
-    
+public class Professor extends Pessoa {
+
     private Double salario;
     private int sala;
 
@@ -26,5 +26,5 @@ public class Professor extends Pessoa{
     public void setSala(int sala) {
         this.sala = sala;
     }
-   
+
 }

@@ -1,4 +1,4 @@
-package aplicacaouffs;
+package exemplo_aula_8.aplicacaouffs;
 
 public class Tecnico extends Pessoa {
 
@@ -10,7 +10,7 @@ public class Tecnico extends Pessoa {
         this.setor = setor;
         this.salario = salario;
     }
-    
+
     public String getSetor() {
         return setor;
     }
@@ -26,5 +26,5 @@ public class Tecnico extends Pessoa {
     public void setSalario(Double salario) {
         this.salario = salario;
     }
-   
+
 }
