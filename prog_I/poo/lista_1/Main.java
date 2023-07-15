@@ -1,6 +1,6 @@
-package prog_I.poo.lista_1;
+package poo.lista_1;
 
-import exercicio5.Pessoa;
+import poo.lista_1.exercicio5.Pessoa;
 
 public class Main {
     // Testes exercício 5

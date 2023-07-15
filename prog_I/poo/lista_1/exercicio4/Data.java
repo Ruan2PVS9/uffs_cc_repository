@@ -1,4 +1,4 @@
-package prog_I.poo.lista_1.exercicio4;
+package poo.lista_1.exercicio4;
 
 public class Data {
     private int dia;

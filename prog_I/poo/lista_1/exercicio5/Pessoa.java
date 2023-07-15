@@ -1,4 +1,4 @@
-package prog_I.poo.lista_1.exercicio5;
+package poo.lista_1.exercicio5;
 
 public class Pessoa {
     private String nome;
