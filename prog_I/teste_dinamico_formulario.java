@@ -3,10 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DynamicFormExample extends JFrame {
+public class teste_dinamico_formulario extends JFrame {
     private JTextField[] textFields;
 
-    public DynamicFormExample() {
+    public teste_dinamico_formulario() {
         setTitle("Dynamic Form Example");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -48,7 +48,7 @@ public class DynamicFormExample extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new DynamicFormExample();
+                new teste_dinamico_formulario();
             }
         });
     }
