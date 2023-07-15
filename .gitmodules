@@ -1,0 +1,3 @@
+[submodule "estrutura_dados/uffs_agenda_trabalho_final_ed"]
+	path = estrutura_dados/uffs_agenda_trabalho_final_ed
+	url = git@github.com:Ruan2PVS9/uffs_agenda_trabalho_final_ed.git
