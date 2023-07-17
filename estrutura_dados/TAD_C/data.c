@@ -3,7 +3,8 @@
 
 #include "data.h"
 
-Data atribData(int dia, int mes, int ano){
+Data atribData(int dia, int mes, int ano)
+{
     Data d;
     d.dia = dia;
     d.mes = mes;
@@ -11,11 +12,13 @@ Data atribData(int dia, int mes, int ano){
     return d;
 }
 
-void printData(Data d){
+void printData(Data d)
+{
     printf("%2d/%2d/%4d", d.dia, d.mes, d.ano);
 }
 
-int numDias(Data d){
+int numDias(Data d)
+{
     int qtd_dias;
     qtd_dias = d.dia + ((d.mes - 1) * 30);
     return qtd_dias;

@@ -1,5 +1,6 @@
 
-struct tdata{
+struct tdata
+{
     int dia;
     int mes;
     int ano;
@@ -8,10 +9,8 @@ struct tdata{
 typedef struct tdata Data;
 
 // Data atribData(int dia,int mes,int ano);
-Data atribData(int,int,int);
+Data atribData(int, int, int);
 
 void printData(Data);
 
 int numDias(Data);
-
-
