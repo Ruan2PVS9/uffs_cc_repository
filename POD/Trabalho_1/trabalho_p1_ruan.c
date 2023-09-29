@@ -175,7 +175,7 @@ int main()
     int tamanhoVetor;
     // 1000, 5000,10000,50000, 100000 e 1000000
     // tamanhoVetor = 100;
-    // tamanhoVetor = 1000;
+    tamanhoVetor = 1000;
     // tamanhoVetor = 5000;
     // tamanhoVetor = 10000;
     // tamanhoVetor = 50000;
@@ -257,6 +257,24 @@ int main()
     printf("\n end time insertion : %f | comparações : %ld | trocas : %ld", time_spent_ins, *contador_ins, *trocas_ins);
     printf("\n end time selection : %f | comparações : %ld | trocas : %ld", time_spent_sel, *contador_sel, *trocas_sel);
     printf("\n end time quick : %f | comparações : %ld | trocas : %ld", time_spent_qs, *contador_qs, *trocas_qs);
+
+    free(vetor);
+
+    free(vet_ins);
+    free(contador_ins);
+    free(trocas_ins);
+
+    free(vet_bb);
+    free(contador_bb);
+    free(trocas_bb);
+
+    free(vet_sel);
+    free(contador_sel);
+    free(trocas_sel);
+
+    free(vet_qs);
+    free(contador_qs);
+    free(trocas_qs);
 
     return 0;
 }
