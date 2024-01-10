@@ -361,7 +361,7 @@ int main()
     // Redix sort
     clock_t begin_rx = clock();
     redixSort(vet_rx, tamanhoVetor, contador_rx, trocas_rx);
-    printf("\nsort vector Redix:\n");
+    printf("\nsort vector Radix:\n");
     print_vet(vet_rx, tamanhoVetor);
     printf("\ncomparacoes %ld", *contador_rx);
     printf("\ntrocas %ld", *trocas_rx);
@@ -375,7 +375,7 @@ int main()
     printf("\n end time selection : %f | comparações : %ld | trocas : %ld", time_spent_sel, *contador_sel, *trocas_sel);
     printf("\n end time quick : %f | comparações : %ld | trocas : %ld", time_spent_qs, *contador_qs, *trocas_qs);
     printf("\n end time heap : %f | comparações : %ld | trocas : %ld", time_spent_hp, *contador_hp, *trocas_hp);
-    printf("\n end time redix : %f | comparações : %ld | trocas : %ld", time_spent_rx, *contador_rx, *trocas_rx);
+    printf("\n end time radix : %f | comparações : %ld | trocas : %ld", time_spent_rx, *contador_rx, *trocas_rx);
     printf("\n");
 
     free(vetor);

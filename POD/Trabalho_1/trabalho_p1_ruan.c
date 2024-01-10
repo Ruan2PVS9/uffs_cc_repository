@@ -174,8 +174,9 @@ int main()
     // int tamanhoVetor = (int)sizeof(vetor) / sizeof(int);
     int tamanhoVetor;
     // 1000, 5000,10000,50000, 100000 e 1000000
+    tamanhoVetor = 10;
     // tamanhoVetor = 100;
-    tamanhoVetor = 1000;
+    // tamanhoVetor = 1000;
     // tamanhoVetor = 5000;
     // tamanhoVetor = 10000;
     // tamanhoVetor = 50000;
