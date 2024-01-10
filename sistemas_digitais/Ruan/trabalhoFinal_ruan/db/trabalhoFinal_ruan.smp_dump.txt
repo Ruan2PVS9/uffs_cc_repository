@@ -1,0 +1,8 @@
+
+State Machine - |batalhaNaval_ruan|state
+Name state.lost state.win state.shot state.set state.start 
+state.start 0 0 0 0 0 
+state.set 0 0 0 1 1 
+state.shot 0 0 1 0 1 
+state.win 0 1 0 0 1 
+state.lost 1 0 0 0 1 

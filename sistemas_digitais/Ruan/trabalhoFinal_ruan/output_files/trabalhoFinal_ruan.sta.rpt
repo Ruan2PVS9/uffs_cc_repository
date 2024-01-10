@@ -1,0 +1,1377 @@
+TimeQuest Timing Analyzer report for trabalhoFinal_ruan
+Thu Dec 14 16:54:20 2023
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'key[0]'
+ 12. Slow Model Hold: 'key[0]'
+ 13. Slow Model Minimum Pulse Width: 'key[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'key[0]'
+ 24. Fast Model Hold: 'key[0]'
+ 25. Fast Model Minimum Pulse Width: 'key[0]'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; trabalhoFinal_ruan                                 ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; key[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { key[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 165.62 MHz ; 165.62 MHz      ; key[0]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; key[0] ; -5.038 ; -111.420      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; key[0] ; 0.445 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; key[0] ; -1.469 ; -60.125              ;
++--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'key[0]'                                                                                      ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+; -5.038 ; nav1[2]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 6.098      ;
+; -5.032 ; nav1[2]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 6.092      ;
+; -4.957 ; nav1[1]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 6.256      ;
+; -4.951 ; nav1[1]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 6.250      ;
+; -4.887 ; nav1[3]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.947      ;
+; -4.881 ; nav1[3]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.941      ;
+; -4.686 ; nav2_casa1[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.746      ;
+; -4.680 ; nav2_casa1[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.740      ;
+; -4.607 ; nav1[0]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.906      ;
+; -4.601 ; nav1[0]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.900      ;
+; -4.595 ; nav2_casa1[3]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.894      ;
+; -4.589 ; nav2_casa1[3]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.888      ;
+; -4.518 ; nav2_casa1[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.578      ;
+; -4.512 ; nav2_casa1[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.572      ;
+; -4.447 ; nav2_casa1[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.746      ;
+; -4.441 ; nav2_casa1[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.740      ;
+; -4.392 ; nav2_casa2[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.691      ;
+; -4.386 ; nav2_casa2[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.685      ;
+; -4.307 ; nav2_casa2[3]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.606      ;
+; -4.301 ; nav2_casa2[3]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.600      ;
+; -4.234 ; nav2_casa2[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.533      ;
+; -4.228 ; nav2_casa2[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.527      ;
+; -4.198 ; cont_erros[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 5.243      ;
+; -4.192 ; cont_erros[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 5.237      ;
+; -4.190 ; nav1[2]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.250      ;
+; -4.166 ; nav2_casa2[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.465      ;
+; -4.160 ; nav2_casa2[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.459      ;
+; -4.109 ; nav1[1]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.408      ;
+; -4.106 ; cont_erros[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 5.151      ;
+; -4.100 ; cont_erros[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 5.145      ;
+; -4.099 ; cont_disparos[3] ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; -0.022     ; 5.115      ;
+; -4.098 ; nav1[2]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.158      ;
+; -4.093 ; cont_disparos[3] ; state.win     ; key[0]       ; key[0]      ; 1.000        ; -0.022     ; 5.109      ;
+; -4.039 ; nav1[3]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.099      ;
+; -4.023 ; nav1[2]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 5.097      ;
+; -4.017 ; nav1[1]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.316      ;
+; -4.003 ; nav1[2]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 5.077      ;
+; -3.947 ; nav1[3]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 5.007      ;
+; -3.942 ; nav1[1]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 5.255      ;
+; -3.922 ; nav1[1]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 5.235      ;
+; -3.872 ; nav1[3]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.946      ;
+; -3.852 ; nav1[3]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.926      ;
+; -3.838 ; nav2_casa1[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 4.898      ;
+; -3.790 ; cont_erros[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 4.835      ;
+; -3.784 ; cont_erros[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 4.829      ;
+; -3.759 ; nav1[0]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.058      ;
+; -3.747 ; nav2_casa1[3]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 5.046      ;
+; -3.746 ; nav2_casa1[1]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 4.806      ;
+; -3.729 ; cont_disparos[2] ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; -0.022     ; 4.745      ;
+; -3.723 ; cont_disparos[2] ; state.win     ; key[0]       ; key[0]      ; 1.000        ; -0.022     ; 4.739      ;
+; -3.710 ; nav1[2]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.784      ;
+; -3.707 ; nav1[2]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.781      ;
+; -3.671 ; nav2_casa1[1]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.745      ;
+; -3.670 ; nav2_casa1[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 4.730      ;
+; -3.667 ; nav1[0]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.966      ;
+; -3.665 ; nav1[2]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.739      ;
+; -3.655 ; nav2_casa1[3]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.954      ;
+; -3.651 ; nav2_casa1[1]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.725      ;
+; -3.629 ; nav1[1]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.942      ;
+; -3.626 ; nav1[1]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.939      ;
+; -3.599 ; nav2_casa1[2]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.898      ;
+; -3.592 ; nav1[0]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.905      ;
+; -3.584 ; nav1[1]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.897      ;
+; -3.580 ; nav2_casa1[3]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.893      ;
+; -3.578 ; nav2_casa1[0]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 4.638      ;
+; -3.572 ; nav1[0]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.885      ;
+; -3.560 ; nav2_casa1[3]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.873      ;
+; -3.559 ; nav1[3]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.633      ;
+; -3.556 ; nav1[3]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.630      ;
+; -3.550 ; nav2_casa2[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.849      ;
+; -3.514 ; nav1[3]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.588      ;
+; -3.507 ; nav2_casa1[2]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.806      ;
+; -3.503 ; nav2_casa1[0]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.577      ;
+; -3.487 ; nav2_casa2[0]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.786      ;
+; -3.483 ; nav2_casa1[0]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.557      ;
+; -3.465 ; nav2_casa2[3]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.764      ;
+; -3.432 ; nav2_casa1[2]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.745      ;
+; -3.422 ; nav2_casa2[0]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.735      ;
+; -3.412 ; nav2_casa1[2]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.725      ;
+; -3.402 ; nav2_casa2[0]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.715      ;
+; -3.402 ; nav2_casa2[3]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.701      ;
+; -3.392 ; nav2_casa2[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.691      ;
+; -3.358 ; nav2_casa1[1]    ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.432      ;
+; -3.356 ; cont_erros[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 4.401      ;
+; -3.355 ; nav2_casa1[1]    ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.429      ;
+; -3.337 ; nav2_casa2[3]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.650      ;
+; -3.329 ; nav2_casa2[1]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.628      ;
+; -3.326 ; nav1[2]          ; cont_erros[1] ; key[0]       ; key[0]      ; 1.000        ; 0.015      ; 4.379      ;
+; -3.324 ; nav2_casa2[2]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.261      ; 4.623      ;
+; -3.319 ; cont_erros[0]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.021      ; 4.378      ;
+; -3.317 ; nav2_casa2[3]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.630      ;
+; -3.313 ; nav2_casa1[1]    ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.036      ; 4.387      ;
+; -3.299 ; cont_erros[0]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.021      ; 4.358      ;
+; -3.293 ; cont_erros[0]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 4.338      ;
+; -3.279 ; nav1[0]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.592      ;
+; -3.276 ; nav1[0]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.589      ;
+; -3.267 ; nav2_casa1[3]    ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.580      ;
+; -3.264 ; nav2_casa1[3]    ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.577      ;
+; -3.264 ; nav2_casa2[1]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.275      ; 4.577      ;
+; -3.264 ; cont_erros[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.007      ; 4.309      ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'key[0]'                                                                                         ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; nav2_casa2[3]    ; nav2_casa2[3]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav2_casa2[2]    ; nav2_casa2[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav1[0]          ; nav1[0]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav1[1]          ; nav1[1]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav2_casa1[0]    ; nav2_casa1[0]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav2_casa1[3]    ; nav2_casa1[3]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav2_casa1[2]    ; nav2_casa1[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; nav2_casa2[1]    ; nav2_casa2[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; state.set        ; state.set        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_acertos[1]  ; cont_acertos[1]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_acertos[2]  ; cont_acertos[2]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_disparos[0] ; cont_disparos[0] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_disparos[3] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_acertos[0]  ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_erros[0]    ; cont_erros[0]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; state.shot       ; state.shot       ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; cont_erros[2]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; state.win        ; state.win        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; state.lost       ; state.lost       ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; hex0[1]~reg0     ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; LEDR[1]~reg0     ; LEDR[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; LEDR[2]~reg0     ; LEDR[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; LEDR[5]~reg0     ; LEDR[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.731      ;
+; 0.623 ; cont_disparos[2] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.909      ;
+; 0.653 ; state.win        ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.939      ;
+; 0.827 ; state.shot       ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.002     ; 1.111      ;
+; 0.832 ; cont_disparos[1] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.670      ; 1.788      ;
+; 0.876 ; cont_disparos[0] ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.680      ; 1.842      ;
+; 0.896 ; cont_erros[1]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.182      ;
+; 0.932 ; state.set        ; hex3[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 1.228      ;
+; 0.943 ; state.set        ; hex3[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 1.239      ;
+; 0.976 ; cont_disparos[0] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.670      ; 1.932      ;
+; 0.978 ; state.start      ; state.set        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.264      ;
+; 1.020 ; state.shot       ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.306      ;
+; 1.115 ; nav1[3]          ; nav1[3]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.401      ;
+; 1.115 ; cont_disparos[1] ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.680      ; 2.081      ;
+; 1.121 ; cont_disparos[1] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.101      ;
+; 1.236 ; state.win        ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.002     ; 1.520      ;
+; 1.252 ; cont_disparos[0] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.232      ;
+; 1.262 ; nav2_casa1[1]    ; nav2_casa1[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.548      ;
+; 1.299 ; state.set        ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.609      ;
+; 1.303 ; state.shot       ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.002     ; 1.587      ;
+; 1.305 ; state.set        ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.615      ;
+; 1.369 ; state.win        ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.669      ;
+; 1.369 ; state.win        ; LEDR[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.669      ;
+; 1.385 ; state.win        ; LEDG[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 1.665      ;
+; 1.389 ; state.win        ; LEDR[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 1.669      ;
+; 1.401 ; cont_disparos[0] ; cont_disparos[1] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.687      ;
+; 1.406 ; LEDR[3]~reg0     ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.692      ;
+; 1.411 ; nav1[0]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.244      ; 1.941      ;
+; 1.418 ; cont_disparos[1] ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.398      ;
+; 1.420 ; state.set        ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 1.716      ;
+; 1.422 ; cont_disparos[1] ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.402      ;
+; 1.461 ; cont_disparos[1] ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.441      ;
+; 1.469 ; LEDG[2]~reg0     ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.755      ;
+; 1.491 ; nav1[2]          ; nav1[2]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.777      ;
+; 1.494 ; cont_disparos[1] ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.474      ;
+; 1.503 ; cont_erros[0]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.789      ;
+; 1.504 ; LEDG[1]~reg0     ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.790      ;
+; 1.506 ; LEDG[0]~reg0     ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.792      ;
+; 1.530 ; cont_disparos[1] ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.510      ;
+; 1.536 ; state.set        ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.846      ;
+; 1.541 ; state.set        ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.851      ;
+; 1.542 ; state.set        ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.852      ;
+; 1.558 ; cont_disparos[0] ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.538      ;
+; 1.560 ; cont_disparos[0] ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.540      ;
+; 1.584 ; state.lost       ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.002     ; 1.868      ;
+; 1.591 ; state.set        ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.901      ;
+; 1.597 ; nav1[3]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.005      ; 1.888      ;
+; 1.597 ; cont_disparos[0] ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.577      ;
+; 1.599 ; cont_disparos[0] ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.579      ;
+; 1.639 ; state.set        ; state.shot       ; key[0]       ; key[0]      ; 0.000        ; -0.022     ; 1.903      ;
+; 1.640 ; cont_disparos[2] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.024      ; 1.950      ;
+; 1.640 ; cont_disparos[1] ; cont_disparos[1] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.926      ;
+; 1.644 ; state.set        ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.024     ; 1.906      ;
+; 1.644 ; state.set        ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.024     ; 1.906      ;
+; 1.648 ; state.shot       ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.927      ;
+; 1.654 ; cont_disparos[2] ; cont_disparos[2] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.940      ;
+; 1.661 ; state.shot       ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.961      ;
+; 1.663 ; state.shot       ; LEDR[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.963      ;
+; 1.666 ; state.shot       ; LEDR[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.966      ;
+; 1.666 ; cont_disparos[0] ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.694      ; 2.646      ;
+; 1.668 ; state.shot       ; LEDR[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.968      ;
+; 1.668 ; state.shot       ; LEDR[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.014      ; 1.968      ;
+; 1.678 ; cont_erros[0]    ; cont_erros[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 1.964      ;
+; 1.699 ; state.shot       ; cont_acertos[1]  ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.978      ;
+; 1.699 ; state.shot       ; cont_acertos[2]  ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.978      ;
+; 1.699 ; state.shot       ; cont_erros[1]    ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.978      ;
+; 1.699 ; state.shot       ; cont_erros[0]    ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.978      ;
+; 1.699 ; state.shot       ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; -0.007     ; 1.978      ;
+; 1.710 ; state.shot       ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; -0.017     ; 1.979      ;
+; 1.710 ; cont_disparos[1] ; cont_disparos[2] ; key[0]       ; key[0]      ; 0.000        ; 0.670      ; 2.666      ;
+; 1.717 ; state.set        ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.029     ; 1.974      ;
+; 1.728 ; LEDR[0]~reg0     ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 2.014      ;
+; 1.734 ; state.start      ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 2.030      ;
+; 1.734 ; state.start      ; hex3[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 2.030      ;
+; 1.734 ; state.start      ; hex2[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 2.030      ;
+; 1.734 ; state.start      ; hex3[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.010      ; 2.030      ;
+; 1.748 ; nav1[2]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.005      ; 2.039      ;
+; 1.761 ; nav1[1]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.244      ; 2.291      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'key[0]'                                                           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; key[0] ; Rise       ; key[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDG[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDG[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDG[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDG[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; LEDR[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[2]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[3]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[4]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[5]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex0[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex2[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex2[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex3[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex3[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; hex3[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; hex3[6]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav1[0]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[0]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav1[1]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[1]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav1[2]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[2]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav1[3]          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[3]          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; state.lost       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; state.lost       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; state.set        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; state.set        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; state.shot       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; state.shot       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; state.start      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; state.start      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; key[0] ; Fall       ; state.win        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; key[0] ; Fall       ; state.win        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; key[0] ; Rise       ; LEDG[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; key[0] ; Rise       ; LEDG[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; key[0] ; Rise       ; LEDG[1]~reg0|clk ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; key[0]     ; 8.226  ; 8.226  ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; 7.781  ; 7.781  ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; 8.043  ; 8.043  ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; 7.707  ; 7.707  ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; 8.226  ; 8.226  ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 6.761  ; 6.761  ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; 2.815  ; 2.815  ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; 6.451  ; 6.451  ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; 10.324 ; 10.324 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; 10.324 ; 10.324 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; key[0]     ; 0.102  ; 0.102  ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; -0.013 ; -0.013 ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; -0.111 ; -0.111 ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; -0.481 ; -0.481 ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; -0.749 ; -0.749 ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 0.102  ; 0.102  ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; -1.830 ; -1.830 ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; -1.475 ; -1.475 ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; -3.117 ; -3.117 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; -3.117 ; -3.117 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 6.818  ; 6.818  ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 6.902  ; 6.902  ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 6.603  ; 6.603  ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 6.912  ; 6.912  ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 7.294  ; 7.294  ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 6.935  ; 6.935  ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 7.263  ; 7.263  ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 7.101  ; 7.101  ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 7.294  ; 7.294  ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 6.942  ; 6.942  ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 7.091  ; 7.091  ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 6.891  ; 6.891  ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 6.879  ; 6.879  ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 11.668 ; 11.668 ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 8.560  ; 8.560  ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 8.573  ; 8.573  ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 10.509 ; 10.509 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 10.465 ; 10.465 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 11.157 ; 11.157 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 9.802  ; 9.802  ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 11.668 ; 11.668 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 10.511 ; 10.511 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 11.436 ; 11.436 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 9.956  ; 9.956  ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 10.533 ; 10.533 ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 10.505 ; 10.505 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 9.801  ; 9.801  ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 9.841  ; 9.841  ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 10.533 ; 10.533 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 11.768 ; 11.768 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 11.009 ; 11.009 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 11.768 ; 11.768 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 6.603  ; 6.603  ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 6.818  ; 6.818  ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 6.902  ; 6.902  ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 6.603  ; 6.603  ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 6.912  ; 6.912  ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 6.879  ; 6.879  ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 6.935  ; 6.935  ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 7.263  ; 7.263  ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 7.101  ; 7.101  ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 7.294  ; 7.294  ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 6.942  ; 6.942  ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 7.091  ; 7.091  ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 6.891  ; 6.891  ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 6.879  ; 6.879  ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 8.560  ; 8.560  ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 8.560  ; 8.560  ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 8.573  ; 8.573  ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 10.509 ; 10.509 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 10.465 ; 10.465 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 11.157 ; 11.157 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 9.802  ; 9.802  ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 11.668 ; 11.668 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 9.956  ; 9.956  ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 10.511 ; 10.511 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 11.436 ; 11.436 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 9.956  ; 9.956  ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 9.801  ; 9.801  ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 10.505 ; 10.505 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 9.801  ; 9.801  ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 9.841  ; 9.841  ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 10.533 ; 10.533 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 11.009 ; 11.009 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 11.768 ; 11.768 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; key[0] ; -1.200 ; -16.446       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; key[0] ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; key[0] ; -1.222 ; -49.222              ;
++--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'key[0]'                                                                                      ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+; -1.200 ; nav1[2]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.254      ;
+; -1.200 ; nav1[2]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.254      ;
+; -1.183 ; nav1[1]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.318      ;
+; -1.183 ; nav1[1]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.318      ;
+; -1.150 ; nav1[3]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.204      ;
+; -1.150 ; nav1[3]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.204      ;
+; -1.070 ; nav2_casa1[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.124      ;
+; -1.070 ; nav2_casa1[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.124      ;
+; -1.063 ; nav1[0]          ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.198      ;
+; -1.063 ; nav1[0]          ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.198      ;
+; -1.041 ; nav2_casa1[3]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.176      ;
+; -1.041 ; nav2_casa1[3]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.176      ;
+; -1.009 ; nav2_casa2[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.144      ;
+; -1.009 ; nav2_casa2[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.144      ;
+; -1.009 ; nav2_casa1[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.063      ;
+; -1.009 ; nav2_casa1[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 2.063      ;
+; -0.992 ; nav2_casa1[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.127      ;
+; -0.992 ; nav2_casa1[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.127      ;
+; -0.955 ; nav2_casa2[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.090      ;
+; -0.955 ; nav2_casa2[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.090      ;
+; -0.943 ; nav2_casa2[3]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.078      ;
+; -0.943 ; nav2_casa2[3]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.078      ;
+; -0.915 ; cont_disparos[3] ; state.win     ; key[0]       ; key[0]      ; 1.000        ; -0.006     ; 1.941      ;
+; -0.915 ; cont_disparos[3] ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; -0.006     ; 1.941      ;
+; -0.912 ; nav1[2]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.966      ;
+; -0.900 ; nav2_casa2[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.035      ;
+; -0.900 ; nav2_casa2[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.035      ;
+; -0.896 ; cont_erros[0]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.937      ;
+; -0.896 ; cont_erros[0]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.937      ;
+; -0.895 ; nav1[1]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.030      ;
+; -0.891 ; nav1[2]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.945      ;
+; -0.882 ; cont_erros[1]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.923      ;
+; -0.882 ; cont_erros[1]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.923      ;
+; -0.874 ; nav1[1]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 2.009      ;
+; -0.862 ; nav1[3]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.916      ;
+; -0.841 ; nav1[3]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.895      ;
+; -0.836 ; nav1[2]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.902      ;
+; -0.823 ; nav1[2]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.889      ;
+; -0.819 ; nav1[1]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.966      ;
+; -0.806 ; nav1[1]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.953      ;
+; -0.786 ; cont_disparos[2] ; state.win     ; key[0]       ; key[0]      ; 1.000        ; -0.006     ; 1.812      ;
+; -0.786 ; cont_disparos[2] ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; -0.006     ; 1.812      ;
+; -0.786 ; nav1[3]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.852      ;
+; -0.782 ; nav2_casa1[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.836      ;
+; -0.780 ; cont_erros[2]    ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.821      ;
+; -0.780 ; cont_erros[2]    ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.821      ;
+; -0.775 ; nav1[0]          ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.910      ;
+; -0.773 ; nav1[3]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.839      ;
+; -0.761 ; nav2_casa1[1]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.815      ;
+; -0.758 ; nav1[2]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.824      ;
+; -0.754 ; nav1[0]          ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.889      ;
+; -0.753 ; nav2_casa1[3]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.888      ;
+; -0.741 ; nav1[1]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.888      ;
+; -0.732 ; nav2_casa1[3]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.867      ;
+; -0.731 ; nav1[2]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.797      ;
+; -0.728 ; nav1[2]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.794      ;
+; -0.721 ; nav2_casa2[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.856      ;
+; -0.721 ; nav2_casa1[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.775      ;
+; -0.714 ; nav1[1]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.861      ;
+; -0.711 ; nav1[1]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.858      ;
+; -0.708 ; nav1[3]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.774      ;
+; -0.706 ; nav2_casa1[1]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.772      ;
+; -0.704 ; nav2_casa1[2]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.839      ;
+; -0.700 ; nav2_casa2[0]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.835      ;
+; -0.700 ; nav2_casa1[0]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.022      ; 1.754      ;
+; -0.699 ; nav1[0]          ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.846      ;
+; -0.693 ; nav2_casa1[1]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.759      ;
+; -0.686 ; nav1[0]          ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.833      ;
+; -0.683 ; nav2_casa1[2]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.818      ;
+; -0.681 ; nav1[3]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.747      ;
+; -0.678 ; nav1[3]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.744      ;
+; -0.677 ; nav2_casa1[3]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.824      ;
+; -0.667 ; nav2_casa2[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.802      ;
+; -0.664 ; nav2_casa1[3]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.811      ;
+; -0.655 ; nav2_casa2[0]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.802      ;
+; -0.655 ; nav2_casa2[3]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.790      ;
+; -0.646 ; nav2_casa2[1]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.781      ;
+; -0.645 ; nav2_casa1[0]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.711      ;
+; -0.642 ; cont_disparos[3] ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; -0.006     ; 1.668      ;
+; -0.642 ; nav2_casa2[0]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.789      ;
+; -0.634 ; nav2_casa2[3]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.769      ;
+; -0.632 ; nav2_casa1[0]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.698      ;
+; -0.628 ; nav2_casa1[1]    ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.694      ;
+; -0.628 ; nav2_casa1[2]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.775      ;
+; -0.621 ; nav1[2]          ; cont_erros[1] ; key[0]       ; key[0]      ; 1.000        ; 0.013      ; 1.666      ;
+; -0.621 ; nav1[0]          ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.768      ;
+; -0.615 ; nav2_casa1[2]    ; LEDR[4]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.762      ;
+; -0.612 ; nav2_casa2[2]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.747      ;
+; -0.608 ; cont_erros[0]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.649      ;
+; -0.604 ; nav1[1]          ; cont_erros[1] ; key[0]       ; key[0]      ; 1.000        ; 0.094      ; 1.730      ;
+; -0.601 ; nav2_casa1[1]    ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.667      ;
+; -0.601 ; nav2_casa2[1]    ; LEDR[3]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.748      ;
+; -0.599 ; nav2_casa1[3]    ; LEDR[5]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.746      ;
+; -0.598 ; nav2_casa1[1]    ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.034      ; 1.664      ;
+; -0.594 ; nav1[0]          ; LEDR[2]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.741      ;
+; -0.594 ; cont_erros[1]    ; state.shot    ; key[0]       ; key[0]      ; 1.000        ; 0.009      ; 1.635      ;
+; -0.591 ; nav1[0]          ; LEDR[1]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.115      ; 1.738      ;
+; -0.591 ; nav2_casa2[2]    ; LEDR[0]~reg0  ; key[0]       ; key[0]      ; 1.000        ; 0.103      ; 1.726      ;
+; -0.589 ; cont_acertos[0]  ; state.win     ; key[0]       ; key[0]      ; 1.000        ; 0.017      ; 1.638      ;
+; -0.589 ; cont_acertos[0]  ; state.lost    ; key[0]       ; key[0]      ; 1.000        ; 0.017      ; 1.638      ;
++--------+------------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'key[0]'                                                                                         ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; nav2_casa2[3]    ; nav2_casa2[3]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav2_casa2[2]    ; nav2_casa2[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav1[0]          ; nav1[0]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav1[1]          ; nav1[1]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav2_casa1[0]    ; nav2_casa1[0]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav2_casa1[3]    ; nav2_casa1[3]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav2_casa1[2]    ; nav2_casa1[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nav2_casa2[1]    ; nav2_casa2[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.set        ; state.set        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_acertos[1]  ; cont_acertos[1]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_acertos[2]  ; cont_acertos[2]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_disparos[0] ; cont_disparos[0] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_disparos[3] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_acertos[0]  ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_erros[0]    ; cont_erros[0]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.shot       ; state.shot       ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont_erros[2]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.win        ; state.win        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; state.lost       ; state.lost       ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; hex0[1]~reg0     ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LEDR[1]~reg0     ; LEDR[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LEDR[2]~reg0     ; LEDR[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; LEDR[5]~reg0     ; LEDR[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; cont_disparos[2] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.393      ;
+; 0.258 ; state.win        ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.410      ;
+; 0.276 ; cont_disparos[1] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.265      ; 0.693      ;
+; 0.307 ; cont_disparos[0] ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.271      ; 0.730      ;
+; 0.319 ; state.shot       ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.471      ;
+; 0.349 ; cont_erros[1]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.501      ;
+; 0.350 ; cont_disparos[0] ; cont_disparos[3] ; key[0]       ; key[0]      ; 0.000        ; 0.265      ; 0.767      ;
+; 0.360 ; state.start      ; state.set        ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.363 ; state.set        ; hex3[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.006      ; 0.521      ;
+; 0.386 ; state.shot       ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.538      ;
+; 0.387 ; cont_disparos[1] ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.271      ; 0.810      ;
+; 0.392 ; state.set        ; hex3[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.006      ; 0.550      ;
+; 0.415 ; cont_disparos[1] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.841      ;
+; 0.416 ; nav1[3]          ; nav1[3]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.568      ;
+; 0.464 ; nav2_casa1[1]    ; nav2_casa1[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.616      ;
+; 0.469 ; cont_disparos[0] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.895      ;
+; 0.473 ; state.win        ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.625      ;
+; 0.489 ; state.set        ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.650      ;
+; 0.497 ; state.set        ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.658      ;
+; 0.513 ; state.shot       ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.665      ;
+; 0.518 ; state.win        ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.682      ;
+; 0.518 ; state.win        ; LEDR[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.682      ;
+; 0.523 ; cont_disparos[1] ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.949      ;
+; 0.524 ; cont_disparos[1] ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.950      ;
+; 0.527 ; cont_disparos[1] ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.953      ;
+; 0.528 ; state.win        ; LEDR[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.002      ; 0.682      ;
+; 0.534 ; nav1[0]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.086      ; 0.772      ;
+; 0.542 ; LEDR[3]~reg0     ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.694      ;
+; 0.543 ; LEDG[2]~reg0     ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.695      ;
+; 0.545 ; cont_disparos[0] ; cont_disparos[1] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.697      ;
+; 0.545 ; LEDG[1]~reg0     ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.697      ;
+; 0.552 ; nav1[2]          ; nav1[2]          ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.704      ;
+; 0.554 ; cont_erros[0]    ; cont_erros[2]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.706      ;
+; 0.556 ; cont_disparos[1] ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.982      ;
+; 0.562 ; LEDG[0]~reg0     ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.714      ;
+; 0.564 ; state.win        ; LEDG[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.002      ; 0.718      ;
+; 0.567 ; cont_disparos[1] ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 0.993      ;
+; 0.571 ; state.set        ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.732      ;
+; 0.576 ; cont_disparos[0] ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 1.002      ;
+; 0.576 ; cont_disparos[0] ; hex0[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 1.002      ;
+; 0.577 ; state.set        ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.738      ;
+; 0.578 ; state.set        ; hex0[6]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.739      ;
+; 0.579 ; cont_disparos[0] ; hex0[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 1.005      ;
+; 0.584 ; nav1[3]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.005      ; 0.741      ;
+; 0.588 ; cont_disparos[1] ; cont_disparos[2] ; key[0]       ; key[0]      ; 0.000        ; 0.265      ; 1.005      ;
+; 0.596 ; cont_disparos[0] ; hex0[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 1.022      ;
+; 0.600 ; state.lost       ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.752      ;
+; 0.609 ; cont_disparos[0] ; hex0[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.274      ; 1.035      ;
+; 0.612 ; state.set        ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.006      ; 0.770      ;
+; 0.619 ; state.shot       ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 0.765      ;
+; 0.621 ; cont_disparos[2] ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.782      ;
+; 0.623 ; cont_disparos[2] ; cont_disparos[2] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.775      ;
+; 0.624 ; state.set        ; state.shot       ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 0.770      ;
+; 0.625 ; cont_disparos[1] ; cont_disparos[1] ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.777      ;
+; 0.626 ; state.set        ; LEDG[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 0.772      ;
+; 0.629 ; state.set        ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 0.775      ;
+; 0.634 ; state.shot       ; LEDR[3]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.798      ;
+; 0.634 ; nav1[2]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.005      ; 0.791      ;
+; 0.635 ; state.shot       ; LEDR[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.799      ;
+; 0.635 ; state.shot       ; LEDR[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.799      ;
+; 0.637 ; state.shot       ; LEDR[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.801      ;
+; 0.637 ; state.shot       ; LEDR[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.801      ;
+; 0.646 ; LEDR[0]~reg0     ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.798      ;
+; 0.652 ; cont_erros[0]    ; cont_erros[1]    ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.804      ;
+; 0.654 ; nav1[1]          ; cont_acertos[0]  ; key[0]       ; key[0]      ; 0.000        ; 0.086      ; 0.892      ;
+; 0.662 ; cont_disparos[0] ; cont_disparos[2] ; key[0]       ; key[0]      ; 0.000        ; 0.265      ; 1.079      ;
+; 0.668 ; cont_disparos[2] ; hex0[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.006      ; 0.826      ;
+; 0.671 ; state.win        ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.823      ;
+; 0.678 ; state.win        ; LEDR[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.842      ;
+; 0.680 ; state.win        ; LEDR[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.844      ;
+; 0.680 ; state.lost       ; LEDG[1]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.832      ;
+; 0.681 ; state.set        ; hex0[5]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.009      ; 0.842      ;
+; 0.681 ; state.win        ; LEDR[2]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.012      ; 0.845      ;
+; 0.689 ; state.lost       ; LEDR[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.841      ;
+; 0.690 ; LEDR[4]~reg0     ; LEDR[4]~reg0     ; key[0]       ; key[0]      ; 0.000        ; 0.000      ; 0.842      ;
+; 0.701 ; state.lost       ; LEDG[0]~reg0     ; key[0]       ; key[0]      ; 0.000        ; -0.006     ; 0.847      ;
+; 0.712 ; nav2_casa2[2]    ; cont_acertos[2]  ; key[0]       ; key[0]      ; 0.000        ; 0.094      ; 0.958      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'key[0]'                                                           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; key[0] ; Rise       ; key[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDG[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDG[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDG[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDG[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDG[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; LEDR[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; LEDR[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_acertos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_acertos[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_disparos[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_disparos[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; cont_erros[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; cont_erros[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[2]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[3]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[4]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[5]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex0[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex0[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex2[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex2[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex3[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex3[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; hex3[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; hex3[6]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav1[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav1[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav1[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav1[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav1[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa1[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa1[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; nav2_casa2[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; nav2_casa2[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; state.lost       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; state.lost       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; state.set        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; state.set        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; state.shot       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; state.shot       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; state.start      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; state.start      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; key[0] ; Fall       ; state.win        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; key[0] ; Fall       ; state.win        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; key[0] ; Rise       ; LEDG[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; key[0] ; Rise       ; LEDG[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; key[0] ; Rise       ; LEDG[1]~reg0|clk ;
++--------+--------------+----------------+------------------+--------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; key[0]     ; 2.855 ; 2.855 ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; 2.642 ; 2.642 ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; 2.737 ; 2.737 ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; 2.630 ; 2.630 ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; 2.855 ; 2.855 ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 2.399 ; 2.399 ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; 0.949 ; 0.949 ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; 2.223 ; 2.223 ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; 4.533 ; 4.533 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; 4.533 ; 4.533 ; Fall       ; key[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; key[0]     ; 0.144  ; 0.144  ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; 0.144  ; 0.144  ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; 0.116  ; 0.116  ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; -0.010 ; -0.010 ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; -0.153 ; -0.153 ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 0.141  ; 0.141  ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; -0.572 ; -0.572 ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; -0.460 ; -0.460 ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; -1.862 ; -1.862 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; -1.862 ; -1.862 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 3.345 ; 3.345 ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 3.275 ; 3.275 ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 3.318 ; 3.318 ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 3.317 ; 3.317 ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 3.220 ; 3.220 ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 3.332 ; 3.332 ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 3.345 ; 3.345 ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 3.489 ; 3.489 ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 3.319 ; 3.319 ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 3.333 ; 3.333 ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 3.337 ; 3.337 ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 3.471 ; 3.471 ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 3.460 ; 3.460 ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 3.489 ; 3.489 ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 3.352 ; 3.352 ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 3.457 ; 3.457 ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 3.309 ; 3.309 ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 3.293 ; 3.293 ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 5.358 ; 5.358 ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 4.081 ; 4.081 ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 4.106 ; 4.106 ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 4.852 ; 4.852 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 4.826 ; 4.826 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 4.982 ; 4.982 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 4.514 ; 4.514 ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 5.358 ; 5.358 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 4.807 ; 4.807 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 5.126 ; 5.126 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 4.654 ; 4.654 ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 4.831 ; 4.831 ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 4.802 ; 4.802 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 4.566 ; 4.566 ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 4.606 ; 4.606 ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 4.831 ; 4.831 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 5.248 ; 5.248 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 5.027 ; 5.027 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 5.248 ; 5.248 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 3.220 ; 3.220 ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 3.275 ; 3.275 ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 3.318 ; 3.318 ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 3.317 ; 3.317 ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 3.220 ; 3.220 ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 3.332 ; 3.332 ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 3.345 ; 3.345 ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 3.293 ; 3.293 ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 3.319 ; 3.319 ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 3.333 ; 3.333 ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 3.337 ; 3.337 ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 3.471 ; 3.471 ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 3.460 ; 3.460 ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 3.489 ; 3.489 ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 3.352 ; 3.352 ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 3.457 ; 3.457 ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 3.309 ; 3.309 ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 3.293 ; 3.293 ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 4.081 ; 4.081 ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 4.081 ; 4.081 ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 4.106 ; 4.106 ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 4.852 ; 4.852 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 4.826 ; 4.826 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 4.982 ; 4.982 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 4.514 ; 4.514 ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 5.358 ; 5.358 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 4.654 ; 4.654 ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 4.807 ; 4.807 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 5.126 ; 5.126 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 4.654 ; 4.654 ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 4.566 ; 4.566 ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 4.802 ; 4.802 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 4.566 ; 4.566 ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 4.606 ; 4.606 ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 4.831 ; 4.831 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 5.027 ; 5.027 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 5.248 ; 5.248 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.038   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+;  key[0]          ; -5.038   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -111.42  ; 0.0   ; 0.0      ; 0.0     ; -60.125             ;
+;  key[0]          ; -111.420 ; 0.000 ; N/A      ; N/A     ; -60.125             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; key[0]     ; 8.226  ; 8.226  ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; 7.781  ; 7.781  ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; 8.043  ; 8.043  ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; 7.707  ; 7.707  ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; 8.226  ; 8.226  ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 6.761  ; 6.761  ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; 2.815  ; 2.815  ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; 6.451  ; 6.451  ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; 10.324 ; 10.324 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; 10.324 ; 10.324 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; key[0]     ; 0.144  ; 0.144  ; Fall       ; key[0]          ;
+;  SW[0]    ; key[0]     ; 0.144  ; 0.144  ; Fall       ; key[0]          ;
+;  SW[1]    ; key[0]     ; 0.116  ; 0.116  ; Fall       ; key[0]          ;
+;  SW[2]    ; key[0]     ; -0.010 ; -0.010 ; Fall       ; key[0]          ;
+;  SW[3]    ; key[0]     ; -0.153 ; -0.153 ; Fall       ; key[0]          ;
+;  SW[4]    ; key[0]     ; 0.141  ; 0.141  ; Fall       ; key[0]          ;
+;  SW[5]    ; key[0]     ; -0.572 ; -0.572 ; Fall       ; key[0]          ;
+;  SW[6]    ; key[0]     ; -0.460 ; -0.460 ; Fall       ; key[0]          ;
+; key[*]    ; key[0]     ; -1.862 ; -1.862 ; Fall       ; key[0]          ;
+;  key[2]   ; key[0]     ; -1.862 ; -1.862 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 6.818  ; 6.818  ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 6.902  ; 6.902  ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 6.603  ; 6.603  ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 6.912  ; 6.912  ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 6.623  ; 6.623  ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 7.294  ; 7.294  ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 6.906  ; 6.906  ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 6.935  ; 6.935  ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 6.924  ; 6.924  ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 7.263  ; 7.263  ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 7.101  ; 7.101  ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 7.294  ; 7.294  ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 6.942  ; 6.942  ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 7.091  ; 7.091  ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 6.891  ; 6.891  ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 6.879  ; 6.879  ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 11.668 ; 11.668 ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 8.560  ; 8.560  ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 8.573  ; 8.573  ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 10.509 ; 10.509 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 10.465 ; 10.465 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 11.157 ; 11.157 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 9.802  ; 9.802  ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 11.668 ; 11.668 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 10.511 ; 10.511 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 11.436 ; 11.436 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 9.956  ; 9.956  ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 11.455 ; 11.455 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 10.533 ; 10.533 ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 10.505 ; 10.505 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 9.801  ; 9.801  ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 9.841  ; 9.841  ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 10.533 ; 10.533 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 11.768 ; 11.768 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 11.009 ; 11.009 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 11.768 ; 11.768 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 10.153 ; 10.153 ; Fall       ; key[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; key[0]     ; 3.220 ; 3.220 ; Fall       ; key[0]          ;
+;  LEDG[0]  ; key[0]     ; 3.275 ; 3.275 ; Fall       ; key[0]          ;
+;  LEDG[1]  ; key[0]     ; 3.318 ; 3.318 ; Fall       ; key[0]          ;
+;  LEDG[2]  ; key[0]     ; 3.317 ; 3.317 ; Fall       ; key[0]          ;
+;  LEDG[3]  ; key[0]     ; 3.220 ; 3.220 ; Fall       ; key[0]          ;
+;  LEDG[4]  ; key[0]     ; 3.332 ; 3.332 ; Fall       ; key[0]          ;
+;  LEDG[5]  ; key[0]     ; 3.345 ; 3.345 ; Fall       ; key[0]          ;
+;  LEDG[6]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+;  LEDG[7]  ; key[0]     ; 3.240 ; 3.240 ; Fall       ; key[0]          ;
+; LEDR[*]   ; key[0]     ; 3.293 ; 3.293 ; Fall       ; key[0]          ;
+;  LEDR[0]  ; key[0]     ; 3.319 ; 3.319 ; Fall       ; key[0]          ;
+;  LEDR[1]  ; key[0]     ; 3.333 ; 3.333 ; Fall       ; key[0]          ;
+;  LEDR[2]  ; key[0]     ; 3.337 ; 3.337 ; Fall       ; key[0]          ;
+;  LEDR[3]  ; key[0]     ; 3.471 ; 3.471 ; Fall       ; key[0]          ;
+;  LEDR[4]  ; key[0]     ; 3.460 ; 3.460 ; Fall       ; key[0]          ;
+;  LEDR[5]  ; key[0]     ; 3.489 ; 3.489 ; Fall       ; key[0]          ;
+;  LEDR[6]  ; key[0]     ; 3.352 ; 3.352 ; Fall       ; key[0]          ;
+;  LEDR[7]  ; key[0]     ; 3.457 ; 3.457 ; Fall       ; key[0]          ;
+;  LEDR[8]  ; key[0]     ; 3.309 ; 3.309 ; Fall       ; key[0]          ;
+;  LEDR[9]  ; key[0]     ; 3.293 ; 3.293 ; Fall       ; key[0]          ;
+; hex0[*]   ; key[0]     ; 4.081 ; 4.081 ; Fall       ; key[0]          ;
+;  hex0[0]  ; key[0]     ; 4.081 ; 4.081 ; Fall       ; key[0]          ;
+;  hex0[1]  ; key[0]     ; 4.106 ; 4.106 ; Fall       ; key[0]          ;
+;  hex0[2]  ; key[0]     ; 4.852 ; 4.852 ; Fall       ; key[0]          ;
+;  hex0[3]  ; key[0]     ; 4.826 ; 4.826 ; Fall       ; key[0]          ;
+;  hex0[4]  ; key[0]     ; 4.982 ; 4.982 ; Fall       ; key[0]          ;
+;  hex0[5]  ; key[0]     ; 4.514 ; 4.514 ; Fall       ; key[0]          ;
+;  hex0[6]  ; key[0]     ; 5.358 ; 5.358 ; Fall       ; key[0]          ;
+; hex1[*]   ; key[0]     ; 4.654 ; 4.654 ; Fall       ; key[0]          ;
+;  hex1[1]  ; key[0]     ; 4.807 ; 4.807 ; Fall       ; key[0]          ;
+;  hex1[3]  ; key[0]     ; 5.126 ; 5.126 ; Fall       ; key[0]          ;
+;  hex1[4]  ; key[0]     ; 4.654 ; 4.654 ; Fall       ; key[0]          ;
+;  hex1[5]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+;  hex1[6]  ; key[0]     ; 5.146 ; 5.146 ; Fall       ; key[0]          ;
+; hex2[*]   ; key[0]     ; 4.566 ; 4.566 ; Fall       ; key[0]          ;
+;  hex2[0]  ; key[0]     ; 4.802 ; 4.802 ; Fall       ; key[0]          ;
+;  hex2[1]  ; key[0]     ; 4.566 ; 4.566 ; Fall       ; key[0]          ;
+;  hex2[2]  ; key[0]     ; 4.606 ; 4.606 ; Fall       ; key[0]          ;
+;  hex2[3]  ; key[0]     ; 4.831 ; 4.831 ; Fall       ; key[0]          ;
+;  hex2[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
+; hex3[*]   ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
+;  hex3[1]  ; key[0]     ; 5.027 ; 5.027 ; Fall       ; key[0]          ;
+;  hex3[4]  ; key[0]     ; 5.248 ; 5.248 ; Fall       ; key[0]          ;
+;  hex3[6]  ; key[0]     ; 4.665 ; 4.665 ; Fall       ; key[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; key[0]     ; key[0]   ; 0        ; 0        ; 0        ; 1174     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; key[0]     ; key[0]   ; 0        ; 0        ; 0        ; 1174     ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 209   ; 209  ;
+; Unconstrained Output Ports      ; 38    ; 38   ;
+; Unconstrained Output Port Paths ; 38    ; 38   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Thu Dec 14 16:54:19 2023
+Info: Command: quartus_sta trabalhoFinal_ruan -c trabalhoFinal_ruan
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'trabalhoFinal_ruan.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name key[0] key[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.038
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.038      -111.420 key[0] 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 key[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469       -60.125 key[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.200
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.200       -16.446 key[0] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 key[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -49.222 key[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4535 megabytes
+    Info: Processing ended: Thu Dec 14 16:54:20 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
